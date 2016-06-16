@@ -24,6 +24,8 @@ html{font-size:3.75vmin;}/*iphone 6*/
 .app{height:100vh;width:100vw;background:#F1F1F1;padding-bottom:4rem;overflow:hidden;}
 .app.app-sub{padding-bottom:0;}
 .app-view{height:100%;overflow:hidden;}
+.app-view.has-head{padding-top:10rem;}
+.app-view-head{height:10rem;margin-top:-10rem;}
 .app-view.has-footer{padding-bottom:4rem;}
 .app-footer{height:4rem;background:#fff;border-top:1px solid #CACACA;}
 .app-head{height:3rem;margin-top:-3rem;background:#49B5FA;display:table;width:100%;padding:0 3rem;}
@@ -62,7 +64,7 @@ html{font-size:3.75vmin;}/*iphone 6*/
 .btn-conner{border-radius:0.2rem;}
 .c-b{color:#359DD9;}
 .has-icon img{height:1.5rem;margin-right:0.5rem;}
-.btn-block{display:inline-block;width:100%;height:3rem;line-height:3rem;}
+.btn-block{display:inline-block;width:100%;height:3rem;line-height:3rem;text-align:center;}
 .btn-blue{background:#49B5FA;color:#fff;text-align:center;}
 .v-m{vertical-align: middle;}
 .btn-pink{background:#FF736E;color:#fff;text-align: center;}
@@ -116,6 +118,7 @@ html{font-size:3.75vmin;}/*iphone 6*/
 /*二级*/
 .app-view-content{height:100%;overflow:auto;}
 .do-area{height:4rem;padding:0 0.7rem;}
+.do-area .col{padding:0 0.3rem;}
 .favior-list{background:#fff;margin:0.2rem;margin-bottom:0;padding:0.5rem;padding-left:4rem;position:relative;}
 .favior-list dt{position:absolute;top:0.5rem;left:0;width:4rem;text-align:center;}
 .favior-list dd h2{font-size:1.2rem;color:#359DD9;margin-bottom:0.5rem;}
@@ -170,4 +173,12 @@ html{font-size:3.75vmin;}/*iphone 6*/
 .seat-view{border:1px solid #C2104C;position:absolute;z-index:10;}
 .seat-thumb ul li.boy-full,.seat-thumb ul li.boy-half,.seat-thumb ul li.boy-full-hold,.seat-thumb ul li.boy-half-hold,.seat-thumb ul li.girl-full,.seat-thumb ul li.girl-half,.seat-thumb ul li.girl-full-hold,.seat-thumb ul li.girl-half-hold{border-color:#009AE9;}
 .page-content.seat{overflow:hidden;}
+.app-view-content.seat{overflow:hidden;}
 .seat-top{height:10%;background:#fff;border-bottom:0.2rem solid #F1F1F1;}
+.seat-top > .row{height:100%;}
+.seat-top p{font-size:0.9rem;}
+.seat-top h2{font-size:1rem;margin-bottom:0.5rem;}
+.bg-b{background:#49B5FA}
+.app-view-head .col{padding:0 0.5rem;}
+.c-gray{color:#B3B3B3;}
+.app-view-head p{font-size:1rem;color:#fff;text-align:center;line-height:1.4rem;margin-top:1rem;}

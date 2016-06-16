@@ -55,10 +55,10 @@ $(function(){
 	$('#seat').find('li').click(function(){
 		if($(this).hasClass('selected')){
 			alert('已选')
-		}else if($(this).hasClass('active')){
-			$(this).removeClass('active')
 		}else{
+			$(".active").removeClass("active")
 			$(this).addClass('active')
+			$("#seatId").html($(this).attr("data"))
 		}
 	})
 })
