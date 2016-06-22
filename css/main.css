@@ -16,8 +16,11 @@ legend{color:#000}
 fieldset,img{border:0}
 table{border-collapse:collapse;border-spacing:0}
 hr{border:0;height:1px}
-html{font-size:3.75vmin;}/*iphone 6*/
+html{font-size:3.75vw;}/*iphone 6*/
 *{box-sizing: border-box;}
+@media all and (orientation : landscape){
+	html{font-size:3.75vh;}
+}
 
 .t-r{text-align:right !important;}
 .t-c{text-align:center;}
@@ -60,14 +63,15 @@ html{font-size:3.75vmin;}/*iphone 6*/
 .app-head .row:last-child{height:4rem;}
 .app-head .row .col{vertical-align: middle;}
 .app-head .face{width:6rem;height:6rem;border-radius:50%;}
-.app-head .row .col p{font-size:0.9rem;color:#fff;padding:0.5rem 0;}
+.app-head .row .col p{font-size:1rem;color:#fff;padding:0.5rem 0;}
 /*按钮*/
 .btn{display:inline-block;height:2.5rem;line-height:2.5rem;padding:0 2rem;font-size:1rem;}
 .btn:active{opacity:0.9;}
 .btn-opatiy{background:rgba(255,255,255,0.9)}
 .btn-conner{border-radius:0.2rem;}
 .c-b{color:#359DD9;}
-.has-icon img{height:1.5rem;margin-right:0.5rem;}
+.has-icon{padding-top:0.2rem;}
+.has-icon img{height:1.5rem;margin-right:0.5rem;margint-top:-0.1rem;}
 .btn-block{display:inline-block;width:100%;height:3rem;line-height:3rem;text-align:center;}
 .btn-blue{background:#49B5FA;color:#fff;text-align:center;}
 .v-m{vertical-align: middle;}
@@ -80,11 +84,11 @@ html{font-size:3.75vmin;}/*iphone 6*/
 /*预约列表*/
 .seat-list{padding:0.2rem;margin-top:0.5rem;}
 .seat-item{background:#fff;margin-bottom:0.2rem;}
-.seat-item .item-time{text-align:center;color:#808080;font-size:0.8rem;padding:0.4rem 0;border-bottom:1px solid #DCDDDD;position:relative;margin-bottom:0.5rem;}
+.seat-item .item-time{text-align:center;color:#808080;font-size:0.9rem;padding:0.4rem 0;border-bottom:1px solid #DCDDDD;position:relative;margin-bottom:0.5rem;}
 .seat-item .item-num{display:inline-block;width:1rem;height:1rem;border-radius:50%;background:#49B5FA;color:#fff;font-size:0.8rem;position:absolute;left:0.2rem;top:50%;margin-top:-0.5rem;line-height:1rem;}
-.seat-item .item-txt{color:#808080;font-size:0.9rem;text-align:center;margin-bottom:0.8rem;}
+.seat-item .item-txt{color:#808080;font-size:1rem;text-align:center;margin-bottom:0.8rem;}
 .c-p{color:#E75975;}
-.seat-item .btn{font-size:0.8rem;}
+.seat-item .btn{font-size:0.95rem;}
 .top-line{border-top:1px solid #E75975;}
 .top-line .col{border-left:1px solid #DCDDDD;position:relative;}
 .top-line .col:before{content: "";position:absolute;top:-1px;right:-0.15rem;width:0.3rem;background:#fff;height:0.5rem;z-index:2;}
@@ -97,8 +101,8 @@ html{font-size:3.75vmin;}/*iphone 6*/
 /* RADIO */
 .regular-radio {opacity:0;position:relative;left:1rem;margin-left:-1rem;z-index:10;width:1rem;height:1rem;}
 .regular-radio + span {vertical-align: middle;-webkit-appearance: none;background-color: #fafafa;border: 1px solid #cacece;box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);padding: 9px;border-radius: 50px;display: inline-block;position: relative;}
-.regular-radio +span + label{vertical-align: middle;margin-right:1rem;color:#9A9A9A;position:relative;top:0.2rem;}
-.regular-radio:checked + span:after {content: ' ';width: 12px;height: 12px;border-radius: 50px;position: absolute;top: 3px;background: #4B87E7;btext-shadow: 0px;left: 3px;font-size: 32px;}
+.regular-radio +span + label{vertical-align: middle;margin-right:1rem;color:#9A9A9A;position:relative;font-size:0.95rem;}
+.regular-radio:checked + span:after {content: ' ';width: 12px;height: 12px;border-radius: 50px;position: absolute;top: 3px;background: #49B5FA;btext-shadow: 0px;left: 3px;font-size: 32px;}
 .regular-radio:checked + sapn {background-color: #e9ecee;color: #99a1a7;border: 1px solid #adb8c0;box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);vertical-align:middle;}
 .regular-radio + span:active, .regular-radio:checked + label:active {box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);}
 /*checkbox*/
@@ -106,24 +110,24 @@ html{font-size:3.75vmin;}/*iphone 6*/
 .select select{width:100%;height:3rem;border:none;border-bottom:1px solid #C9CACA;background:transparent;}
 .select:after{content:"";position:absolute;width:1rem;height:1rem;background:url(../img/ion-down.png) #fff no-repeat center center;background-size:1rem;right:0.5rem;top:50%;margin-top:-0.5rem;}
 .form-line{position:relative;}
-.form-line .select select{padding-left:5rem;font-size:0.9rem;color:#B3B3B3;}
-.form-line .tag{position:absolute;left:0;width:5rem;display:inline-block;text-align:right;padding-right:1rem;height:3rem;line-height:3rem;font-size:0.9rem;color:#359DD9;}
+.form-line .select select{padding-left:5rem;font-size:1rem;color:#B3B3B3;}
+.form-line .tag{position:absolute;left:0;width:5rem;display:inline-block;text-align:right;padding-right:1rem;height:3rem;line-height:3rem;font-size:1rem;color:#359DD9;}
 .pl-5{padding-left:5rem;}
 .form-line .pl-5{height:3rem;padding-top:0.5rem;}
 .form-line .app-radio{margin-right:1rem;color:#808080;font-size:0.9rem;}
 .select select:focus{border-color:#49B5FA;}
 
-.day-pick a{border:1px solid #C9CACA;display:inline-block;width:4rem;height:4rem;font-size:0.9rem;color:#666666;padding:1rem 0;line-height:1rem;border-radius:0.2rem;position:relative;}
+.day-pick a{border:1px solid #C9CACA;display:inline-block;width:4rem;height:4rem;font-size:0.95rem;color:#666666;padding:1rem 0;line-height:1rem;border-radius:0.2rem;position:relative;}
 .day-pick .active a{background:#3FA9F5;border-color:#3FA9F5;color:#fff;position:relative;}
 .day-pick .active a:after{content: "";display:inline-block;width:1.4rem;height:1.4rem;position:absolute;top:-0.4rem;right:-0.4rem;background:url(../img/icon-right.png) no-repeat center center;background-size:1.4rem;}
 .wid-full{width:100%;}
 .date{position:relative;display:inline-block;width:100%;height:2.4rem;line-height:2.4rem;border:1px solid #C9CACA;}
-.date a{display:inline-block;width:100%;height:2.4rem;line-height:2.4rem;font-size:0.9rem;color:#666;text-align: left;padding:0 0.5rem;}
+.date a{display:inline-block;width:100%;height:2.4rem;line-height:2.4rem;font-size:0.9rem;color:#666;text-align: left;padding:0 0.5rem;font-size:0.95rem;}
 .date:after{content:"";position:absolute;right:0.3rem;top:50%;margin-top:-0.5rem;display:inline-block;width:1.2rem;height:1rem;background:url(../img/ion-clock.png) #fff no-repeat center center;background-size:1rem;}
-.date input{height:2.5rem;line-height:2.5rem;border:1px solid #C9CACA;width:100%;color:#666666;font-size:0.9rem;background:#fff;}
-.time-pick th{text-align:center;color:#359DD9;font-size:0.9rem;height:2rem;font-weight:normal;}
+.date input{height:2.5rem;line-height:2.5rem;border:1px solid #C9CACA;width:100%;color:#666666;font-size:1rem;background:#fff;}
+.time-pick th{text-align:center;color:#359DD9;font-size:1rem;height:2rem;font-weight:normal;}
 .time-pick td{text-align:center;color:#666666;}
-.tips{font-size:0.9rem;color:#EFBC32;padding-left:1.5rem;background:url(../img/ion-tips.png) no-repeat left center;height:2rem;line-height:2rem;background-size:1.2rem;margin:0 0.5rem;}
+.tips{font-size:1rem;color:#EFBC32;padding-left:1.5rem;background:url(../img/ion-tips.png) no-repeat left center;height:2rem;line-height:2rem;background-size:1.2rem;margin:0 0.5rem;}
 /*二级*/
 .app-view-content{height:100%;overflow:auto;}
 .do-area{height:4rem;padding:0 0.7rem;}

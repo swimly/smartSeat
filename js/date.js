@@ -3,7 +3,7 @@ $(function(){
 		var _this=$(this);
 		$(".hour").find("span").click(function(){
 			$(this).addClass("active").siblings().removeClass("active");
-			$("#hour").html($(this).html()>10?$(this).html():"0"+$(this).html())
+			$("#hour").html($(this).html())
 		})
 		$(".minute").children().click(function(){
 			$(this).addClass("active").siblings().removeClass("active");
