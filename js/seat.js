@@ -2,7 +2,7 @@ $(function(){
 	var col=$("#seat").children().length;
 	var colWidth=$("#seat").children().eq(0).width();
 	var colHeight=$("#seat").children().eq(0).height();
-	var wid=col*colWidth
+	var wid=col*colWidth+(col/3)*15;
 	$("#seat").width(wid);
 	var thumb=$("#seat").children().clone().appendTo("#thumb");
 	var viewBl=$(".seat-content").height()/$(".seat-content").width();

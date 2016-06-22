@@ -12,7 +12,6 @@
 	<body>
 		<div class="app has-head">
 			<div class="app-head">
-				<a class="left" href="#"></a>
 				<h1 class="title">预约座位</h1>
 				<a class="right" href="#"></a>
 			</div>
@@ -23,37 +22,63 @@
 							<span class="tag">类型</span>
 							<div class="pl-5">
 								<div class="app-radio">
-						            <input type="radio" name="sex" id="boy" checked="checked" />
+						            <input type="radio" name="sex" id="boy" checked="checked" value="0"/>
 						            <span></span>
 						            <label for="boy">自习室</label>
 						        </div>
 						        <div class="app-radio">
-						            <input type="radio" name="sex" id="girl" />
+						            <input type="radio" name="sex" id="girl"  value="1"/>
 						            <span></span>
 						            <label for="girl">研修室</label>
 						        </div>
 							</div>
 						</div>
-						<div class="form-line">
-							<span class="tag">图书馆</span>
-							<div class="select">
-								<select>
-									<option>致未来图书馆</option>
-								</select>
+						<div class="radio-item" style="display:block;">
+							<div class="form-line">
+								<span class="tag">图书馆</span>
+								<div class="select">
+									<select>
+										<option>致未来图书馆</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-line">
+								<span class="tag">自习室</span>
+								<div class="select">
+									<select>
+										<option>1层测试自习室</option>
+									</select>
+								</div>
 							</div>
 						</div>
-						<div class="form-line">
-							<span class="tag">自习室</span>
-							<div class="select">
-								<select>
-									<option>1层测试自习室</option>
-								</select>
+						<div class="radio-item">
+							<div class="form-line">
+								<span class="tag">图书馆</span>
+								<div class="select">
+									<select>
+										<option>致未来图书馆</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-line">
+								<span class="tag">研修室</span>
+								<div class="select">
+									<select>
+										<option>1层测试自习室</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-line">
+								<span class="tag">总人数</span>
+								<div>
+									<input type="text" class="input" />
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="app-banel">
 						<ul class="row day-pick">
-							<li class="col t-c">
+							<li class="col t-c active">
 								<a href="#">今天<br/>05-31</a>
 							</li>
 							<li class="col t-c">
@@ -77,9 +102,9 @@
 									<th width="45%">截止时间</th>
 								</tr>
 								<tr>
-									<td><div class="date"><input type="datetime-local "/></div></td>
+									<td><div class="date"><a href="#open-modal1" class="pickdate" id="start">12:30</a></div></td>
 									<td>—</td>
-									<td><div class="date"><input type="datetime-local"/></div></td>
+									<td><div class="date"><a href="#open-modal1" class="pickdate" id="end">12:30</a></div></td>
 								</tr>
 							</table>
 						</div>
@@ -91,10 +116,13 @@
 				<div class="do-area">
 					<div class="row">
 						<div class="col v-m">
-							<a class="btn btn-conner btn-pink btn-block" href="#">机选座位</a>
+							<a class="btn btn-conner btn-pink btn-block" href="机选座位.html">机选座位</a>
 						</div>
 						<div class="col v-m">
 							<a class="btn btn-conner btn-blue btn-block" href="自选座位.html">自选座位</a>
+						</div>
+						<div id="qd" class="col v-m" style="display: none;">
+							<a class="btn btn-conner btn-blue btn-block" href="预约-确定.html">确定</a>
 						</div>
 					</div>
 				</div>
@@ -108,5 +136,83 @@
 				</div>
 			</div>
 		</div>
+		<div id="open-modal1" class="modal-window">
+		    <div class="row">
+		        <div class="col v-m">
+		        	<div class="modal-title row">
+		        		<h2 class="col" style="padding-left:2rem;width:65%;">小时    (24小时制)</h2>
+		        		<p class="col" style="padding-left:4rem;text-align: left;">分钟</p>
+		        	</div>
+		        	<ul class="row">
+		        		<li class="col col-70 fs-0 hour" style="padding:0 2rem;border-right:1px dashed #fff;width:65%;">
+		        			<span class="time">6</span>
+		        			<span class="time">7</span>
+		        			<span class="time">8</span>
+		        			<span class="time">9</span>
+		        			<span class="time">10</span>
+		        			<span class="time">11</span>
+		        			<span class="time">12</span>
+		        			<span class="time">13</span>
+		        			<span class="time">14</span>
+		        			<span class="time">15</span>
+		        			<span class="time">16</span>
+		        			<span class="time">17</span>
+		        			<span class="time">18</span>
+		        			<span class="time">19</span>
+		        			<span class="time">20</span>
+		        			<span class="time">21</span>
+		        			<span class="time">22</span>
+		        			<span class="time">23</span>
+		        		</li>
+		        		<li class="col col-30 fs-0 minute" style="padding-left:2rem; width: 35%;padding-left:3rem;">
+		        			<span class="time">00</span>
+		        			<span class="time">10</span>
+		        			<span class="time">20</span>
+		        			<span class="time">30</span>
+		        			<span class="time">40</span>
+		        			<span class="time">50</span>
+		        		</li>
+		        	</ul>
+		        	<div class="row" style="padding:2rem;">
+		        		<div class="col pick-time v-m" style="width:50%;">
+		        			<h2>起始时间</h2>
+		        			<p><span id="hour">11</span>:<span id="min">20</span></p>
+		        		</div>
+		        		<div class="col" style="width:50%;vertical-align: bottom;">
+		        			<a href="#" class="btn btn-blue btn-conner btn-block" id="confirm">确定</a>
+		        		</div>
+		        	</div>
+		        </div>
+		    </div>
+		</div>
+		<div id="open-modal2" class="modal-window">
+		    <div class="row">
+		        <div class="col v-m">
+		        	<div class="modal-title">
+		        		<h2>错误提示</h2>
+		        		<a href="#modal-close" title="Close" class="modal-close"></a>
+		        	</div>
+		        	<img style="position:relative;left:1rem;" src="img/errors.png" />
+		        	<p>所选参数无法提交，请填写正确</p>
+		        </div>
+		    </div>
+		</div>
+		<script src="js/zepto_1.1.3.js"></script>
+		<script src="js/date.js"></script>
+		<script>
+			/*radio切换*/
+			$("input[type='radio']").change(function(){
+				var index=$("input[name='sex']:checked").val();
+				$(".radio-item").eq(index).show().siblings(".radio-item").hide();
+				if(index==1){
+					$("#qd").show().siblings().hide();
+				}else{
+					$("#qd").hide().siblings().show();
+				}
+			})
+			$(".day-pick").children().click(function(){
+				$(this).addClass("active").siblings().removeClass("active");
+			})
+		</script>
 	</body>
 </html>
